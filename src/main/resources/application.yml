@@ -1,3 +1,12 @@
+debug: false
+management.endpoint.web.exposure.include: "*"
+
+logging:
+  level:
+    com.study.board.board: debug
+    org.springframework.web.servlet: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+
 server:
   port: 8080
 
@@ -5,7 +14,7 @@ spring:
   application:
     name: board-project
   datasource:
-    url: jdbc:mysql://localhost:4000/borad
+    url: jdbc:mysql://localhost:4000/board
     username: user1
     password: 1019
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -18,6 +27,7 @@ spring:
       hibernate:
         format_sql: true
         default_batch_fetch_size: 100
+        hibernate.dialect: org.hibernate.dialect.MySQLDialect
 
   h2:
     console:
