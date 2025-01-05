@@ -32,6 +32,7 @@ dependencies {
     runtimeOnly 'com.mysql:mysql-connector-j'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     testImplementation 'org.assertj:assertj-core:3.27.0'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
     // QueryDSL 설정
     implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
@@ -63,6 +64,3 @@ sourceSets {
 clean {
     delete file(generated)
 }
-
-
-
