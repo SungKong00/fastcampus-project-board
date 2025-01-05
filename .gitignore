@@ -213,4 +213,5 @@ gradle-app.setting
 # Java heap dump
 *.hprof
 
-# End of https://www.toptal.com/developers/gitignore/api/java,macos,intellij+all,gradle
+# Querydsl 생성 파일
+/src/main/generated
