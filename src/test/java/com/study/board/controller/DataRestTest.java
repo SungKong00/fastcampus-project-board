@@ -10,7 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -71,4 +71,14 @@ public class DataRestTest {
                 .andExpect(content().contentType(MediaType.valueOf("application/hal+json")));
     }
 
+    @DisplayName("[api] 회원 관련 API 는 일체 제공하지 않는다.")
+    void givenNothing_whenRequestingUserAccounts_thenThrowsException() throws Exception {
+        // When & Then
+        mvc.perform(get("/api/userAccouts")).andExpect(status().isNotFound());
+        mvc.perform(post("/api/userAccouts")).andExpect(status().isNotFound());
+        mvc.perform(put("/api/userAccouts")).andExpect(status().isNotFound());
+        mvc.perform(patch("/api/userAccouts")).andExpect(status().isNotFound());
+        mvc.perform(delete("/api/userAccouts")).andExpect(status().isNotFound());
+        mvc.perform(head("/api/userAccouts")).andExpect(status().isNotFound());
+    }
 }

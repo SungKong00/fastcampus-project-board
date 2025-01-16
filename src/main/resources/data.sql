@@ -1,3 +1,8 @@
+insert into user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) values
+                                                                                                                               ('castleKong', '1019', 'CastleKong', 'castlekong1019@gmail.com', 'I am Castlekong', now(), 'castlekong', now(), 'castlekong');
+
+
+
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', 'Goldenrod', 'Idette', 'Rose', '2024-04-09 07:18:01', '2024-02-23 04:39:47');
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.
 

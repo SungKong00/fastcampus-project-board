@@ -41,3 +41,10 @@ spring:
   sql:
     init:
       mode: always
+
+  thymeleaf:
+    enable: true
+    cache: false
+
+  thymeleaf3:
+    decoupled-logic: true
